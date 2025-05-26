@@ -1,0 +1,46 @@
+<ion-content style="--background: #fef7ff;">
+  <div style="height: 100px; text-align: center">
+    <img
+      src="assets/svg/back-button-dark.svg"
+      alt=""
+      class="back-button-dark"
+      (click)="onMostrarLogin()"
+      (keydown)="onMostrarLogin()"
+    />
+
+    <div>
+      <img
+        src="assets/svg/lepsy_logo_dark.svg"
+        alt=""
+        style="margin-top: 30px; width: 40%"
+      />
+
+      <ion-label class="title-header disBlock">HISTORIAL DE CRISIS</ion-label>
+    </div>
+    <div class="div-modal ion-padding" style="height: 78%">
+        <br />
+        <ion-content class="ion-padding" style="height: 35vh">
+          <div
+            class="justify-content mgt-10"
+            *ngFor="let item of [1, 1, 1, 1, 1, 1, 1]"
+          >
+            <div class="align-items" style="border: 1px solid; border-radius: 21px">
+              <div class="dia-info">
+                <span class="disBlock"> Lu - 28 </span>
+                <span class="disBlock"> Abr - 2025 </span>
+              </div>
+              <div style="margin: 0px 15px; text-align: start">
+                <span class="disBlock"> Duración: 10 min </span>
+                <span class="disBlock"> Tipo: Focal </span>
+              </div>
+              <div class="align-items">
+                <ion-icon name="chevron-forward-outline" style="font-size: 25px"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+        <br>
+        <img src="assets/svg/historial.svg" alt="" style="max-width: 150%; width: 104%;">
+    </div>
+  </div>
+</ion-content>

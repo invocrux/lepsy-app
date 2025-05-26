@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+
+
+.title-header{
+  padding-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.dia-info{
+  background: #927494;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}

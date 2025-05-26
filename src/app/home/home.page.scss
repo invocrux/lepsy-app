@@ -1,27 +1,49 @@
-#container {
-  text-align: center;
+ion-content {
+  --background: linear-gradient(180deg, rgba(245, 208, 248, 1) 0%, rgba(138, 65, 147, 1) 50%);
+}
 
+.footer_login {
+  left: 30px;
+  display: block;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 40px;
+  font-size: 25px;
+  width: 62vw;
 }
 
-#container strong {
+.button-acceso {
+  --background: #AA83B2;
+  color: white;
+}
+
+.button-registro {
+  --background: #AD84B6;
+  color: white;
+}
+
+ion-input {
+  text-transform: uppercase;
+  --highlight-color-valid: #0065ff !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  --padding-start: 16px !important;
+  --border-radius: 15px !important;
+  border-radius: 15px;
+  background: #fff;
+  opacity: 0.9 !important;
+  color: #000;
+}
+
+.footer_img {
+  position: absolute;
+  left: 45%;
+  width: 111%;
+  bottom: 50px;
+}
+
+.header-crear {
+  color: #AA83B2;
+  font-weight: 800;
+  text-align: center;
   font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }

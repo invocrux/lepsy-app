@@ -1,7 +1,8 @@
 {
   "name": "lepsy-app",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
-  "type": "angular-standalone"
+  "type": "angular"
 }

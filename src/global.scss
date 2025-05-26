@@ -24,7 +24,7 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
-
+@import "theme/modal.scss";
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -32,6 +32,144 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+@font-face {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Comfortaa-VariableFont_wght.ttf");
+}
+
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+span,
+strong,
+div,
+ion-back-button,
+ion-toolbar {
+  font-family: var(--font);
+  margin: 0;
+}
+
+.disFlex {
+  display: flex;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.disBlock {
+  display: block;
+}
+
+.align-items {
+  display: flex;
+  align-items: center;
+}
+
+
+.width50 {
+  width: 50%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mgt-10 {
+  margin-top: 15px;
+}
+
+.mgl-10 {
+  margin-left: 20px;
+}
+
+.mgr-10 {
+  margin-right: 20px;
+}
+
+.back-button-dark {
+  top: 16px;
+  position: absolute;
+  left: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ion-checkbox {
+  --checkbox-background: white !important;
+  --checkbox-background-checked: #b096b2 !important;
+  --checkmark-color: none !important;
+  --border-color-checked: white !important;
+}
+
+ion-toggle {
+  scale: 2.8;
+  --track-background-checked: #896591;
+}
+
+ion-item {
+  --background: #f9f3f9;
+  color: #b096b2;
+  font-weight: bold;
+}
+
+.div-modal {
+  background-color: #fff;
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 10% 10% 0px 0px;
+}
+
+ion-label {
+  color: #b096b2;
+  font-weight: bold;
+}
+
+.cardSinFlex {
+  overflow: hidden;
+  background-color: #fff;
+  height: auto;
+  border-radius: 16px;
+  padding: 12px 10px;
+  margin: 4px 0px;
+  position: relative;
+}
+
+ion-datetime {
+    --background: #fff1f2;
+    --background-rgb: 255, 241, 242;
+  
+    border-radius: 16px;
+    box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+  }
+
+

@@ -1,0 +1,70 @@
+:host {
+  display: block;
+}
+
+ion-toolbar {
+  --background: #fef7ff;
+  --color: #aa83b2;
+  --border-width: 0;
+}
+
+ion-tab {
+  background: #fef7ff;
+}
+
+ion-content {
+  --background: #fef7ff;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  background: red;
+  border-radius: 50%;
+}
+
+.name-perfil {
+  color: #aa83b2;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.div-modal {
+  background-color: #fff;
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 10% 10% 0px 0px;
+}
+
+ion-item{
+  --background: #F9F3F9;
+    color: #B096B2;
+    font-weight: bold;
+}
+
+ion-list{
+  background: #F9F3F9;
+  border-radius: 15px !important;
+}
+
+ion-datetime {
+  --background: #fff1f2;
+  --background-rgb: 255, 241, 242;
+
+  border-radius: 16px;
+  box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+}
+
+.contenedor-toggle{
+    position: absolute;
+    width: 100%;
+    top: 45vh;
+}
+
+ion-tab-button{
+  background: #fff;
+}

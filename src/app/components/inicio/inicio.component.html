@@ -1,0 +1,317 @@
+<ion-tabs mode="ios">
+  <ion-tab tab="home">
+    <div id="home-page">
+      <ion-header mode="ios">
+        <ion-toolbar style="--border-width: 0px">
+          <div class="space-between">
+            <img
+              [src]="
+                frameVinculado
+                  ? 'assets/svg/back-button-dark.svg'
+                  : 'assets/svg/back-button.svg'
+              "
+              alt=""
+              (click)="atrasp()"
+            />
+            <img
+              src="assets/svg/options.svg"
+              alt=""
+              style="margin-right: 15px"
+              (click)="onOptions()"
+            />
+          </div>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content style="height: 90vh" *ngIf="!frameVinculado">
+        <div class="centrado" style="height: 90vh">
+          <div class="text-center" style="position: relative">
+            <img src="assets/svg/lepsy_logo_dark.svg" alt="" />
+            <img
+              src="assets/svg/back-home.svg"
+              alt=""
+              [style.display]="mostrarVincular ? '' : 'none'"
+            />
+            <img
+              src="assets/svg/vinculando.svg"
+              alt=""
+              [style.display]="mostrarVincular ? 'none' : ''"
+            />
+            <div class="contenedor-toggle">
+              <ion-toggle
+                (ionChange)="onVincular($event)"
+                mode="ios"
+              ></ion-toggle>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+
+      <ion-content style="height: 90vh" *ngIf="frameVinculado">
+        <div
+          class="width100 justify-content"
+          style="top: 13vh; position: absolute"
+        >
+          <ion-toggle
+            (ionChange)="onVincular($event)"
+            style="scale: 1.8"
+            [checked]="frameVinculado"
+            mode="ios"
+          ></ion-toggle>
+        </div>
+        <div class="text-center">
+          <img src="assets/svg/lepsy_logo_dark.svg" alt="" style="width: 40%" />
+          <img
+            src="assets/svg/monitoreo.svg"
+            alt=""
+            style="max-width: 200%; width: 102%"
+          />
+        </div>
+        <div class="div-modal" style="height: 40%">
+          <br /><br />
+
+          <ion-item
+            mode="ios"
+            color="white"
+            [button]="true"
+            (click)="onControlMedicamentos()"
+          >
+            <div
+              class="width100 disFlex"
+              style="align-items: center; margin: 10px 0px"
+            >
+              <img src="assets/svg/edit.svg" alt="" />
+              <p class="disBlock mgl-10">Control de Medicacion</p>
+            </div>
+          </ion-item>
+
+          <ion-item
+            [button]="true"
+            color="white"
+            mode="ios"
+            (click)="onHistorialCrisis()"
+          >
+            <div
+              class="width100 disFlex"
+              style="align-items: center; margin: 10px 0px"
+            >
+              <img src="assets/svg/calendar.svg" alt="" />
+              <p class="disBlock mgl-10">Historial de crisis</p>
+            </div>
+          </ion-item>
+        </div>
+      </ion-content>
+    </div>
+  </ion-tab>
+
+  <ion-tab tab="search">
+    <div id="search-page">
+      <ion-header mode="ios">
+        <ion-toolbar style="--border-width: 0px">
+          <ion-title>Registro de datos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content style="height: 90vh">
+        <div class="disFlex" style="padding-left: 20px; padding-top: 40px">
+          <div>
+            <img
+              src="assets/svg/profile-edit.svg"
+              alt=""
+              style="max-width: 140%; width: 115%"
+            />
+          </div>
+
+          <div
+            style="color: #aa83b2; margin-left: 20px"
+            class="disBlock name-perfil"
+          >
+            James Schleifer
+          </div>
+        </div>
+        <br /><br /><br />
+        <div class="text-center">
+          <img
+            src="assets/svg/tool-bar.svg"
+            alt=""
+            style="max-width: 140%; width: 80%"
+          />
+        </div>
+
+        <div class="div-modal">
+          <ion-accordion-group style="margin-top: 30px" [multiple]="true">
+            <ion-accordion value="first" style="background: #fff">
+              <ion-item slot="header" color="white" lines="none">
+                <div
+                  class="width100 disFlex"
+                  style="align-items: center; margin: 10px 0px"
+                >
+                  <img src="assets/svg/corazon.svg" alt="" />
+                  <p class="disBlock mgl-10">Tipo de epilepsia</p>
+                </div>
+              </ion-item>
+
+              <div slot="content">
+                <ion-list [inset]="true">
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Tónica."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Clónica."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Tónico-clónica."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Mioclónica."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Mioclónico-tónico-clónica."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Atónica."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Mioclono-atónica."
+                    ></ion-input>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="second" style="background: #fff">
+              <ion-item slot="header" color="white">
+                <!-- <ion-label>14-Mar-2016 (9 años)</ion-label> -->
+                <div
+                  class="width100 disFlex"
+                  style="align-items: center; margin: 10px 0px"
+                >
+                  <img src="assets/svg/calendar.svg" alt="" />
+                  <p class="disBlock mgl-10">14-Mar-2016 (9 años)</p>
+                </div>
+              </ion-item>
+              <div slot="content">
+                <ion-datetime
+                  color="rose"
+                  style="margin: 10px auto"
+                ></ion-datetime>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="third" style="background: #fff">
+              <ion-item slot="header" color="white">
+                <div
+                  class="width100 disFlex"
+                  style="align-items: center; margin: 10px 0px"
+                >
+                  <img src="assets/svg/genero.svg" alt="" />
+                  <p class="disBlock mgl-10">Genero</p>
+                </div>
+              </ion-item>
+              <div slot="content">
+                <ion-list [inset]="true">
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Masculino."
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-checkbox
+                      mode="ios"
+                      slot="start"
+                      aria-label="Toggle task completion"
+                    ></ion-checkbox>
+                    <ion-input
+                      aria-label="Task name"
+                      value="Femenino."
+                    ></ion-input>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+          <ion-item mode="ios" color="white" [button]="true" (click)="logout()">
+            <div
+              class="width100 disFlex"
+              style="align-items: center; margin: 10px 0px"
+            >
+              <img src="assets/svg/logout.svg" alt="" />
+              <p class="disBlock mgl-10" style="color: #ff5c5c">
+                Salir de la cuenta
+              </p>
+            </div>
+          </ion-item>
+        </div>
+      </ion-content>
+    </div>
+  </ion-tab>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

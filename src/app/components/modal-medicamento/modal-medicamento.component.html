@@ -1,0 +1,130 @@
+<ion-content style="height: 90vh;">
+    <div class="ion-padding" style="background: #f9f3f9">
+      <br />
+      <ion-label >Datos del Medicamento</ion-label>
+      <br /><br />
+    
+      <div class="disFlex">
+        <img src="assets/svg/pastilla.svg" alt="" />
+        <ion-input class="mgl-10" placeholder="Nombre del medicamento" 
+        (ionChange)="onNombre($event)"></ion-input>
+      </div>
+    
+      <br />
+      <div class="space-between align-items">
+        <ion-chip mode="ios" outline="false" (click)="tipoJarabe()">
+          <ion-label>Jarabe</ion-label>
+        </ion-chip>
+        <ion-chip mode="ios" outline="false" (click)="tipoPastilla()">
+          <ion-label>Pastilla</ion-label>
+        </ion-chip>
+        <ion-chip mode="ios" outline="false" (click)="tipoInyectable()">
+          <ion-label>Inyectable</ion-label>
+        </ion-chip>
+        <ion-chip mode="ios" outline="false" (click)="tipoSpray()">
+          <ion-label>Spray</ion-label>
+        </ion-chip>
+      </div>
+    
+      <br />
+      <div class="align-items space-between">
+        <div class="align-items">
+          <ion-icon
+            slot="start"
+            name="calendar-outline"
+            class="mgr-10"
+            style="font-size: 30px"
+          ></ion-icon>
+          <ion-label>Comienzo</ion-label>
+        </div>
+        <div class="align-items">
+          <ion-label>{{comienzo}}</ion-label>
+        </div>
+      </div>
+    
+      <div class="align-items space-between mgt-10">
+        <div class="align-items">
+          <ion-icon
+            slot="start"
+            name="time-outline"
+            class="mgr-10"
+            style="font-size: 30px"
+          ></ion-icon>
+    
+          <ion-label>Hora</ion-label>
+        </div>
+        <div class="align-items">
+          <ion-label>{{hora}}</ion-label>
+        </div>
+      </div>
+      <ion-datetime color="rose" style="margin: 10px auto" (ionChange)="changeFecha($event)"></ion-datetime>
+    
+     
+        <ion-item lines="none" >
+          <ion-checkbox
+            mode="ios"
+            slot="start"
+            aria-label="Toggle task completion"
+          ></ion-checkbox>
+          <ion-input aria-label="Task name" value="Cada día."></ion-input>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-checkbox
+            mode="ios"
+            slot="start"
+            aria-label="Toggle task completion"
+          ></ion-checkbox>
+          <ion-input aria-label="Task name" value="Ciertos dias."></ion-input>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-checkbox
+            mode="ios"
+            slot="start"
+            aria-label="Toggle task completion"
+          ></ion-checkbox>
+          <ion-input aria-label="Task name" value="Intervalo de dias."></ion-input>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-checkbox
+            mode="ios"
+            slot="start"
+            aria-label="Toggle task completion"
+          ></ion-checkbox>
+          <ion-input aria-label="Task name" value="Ciclo."></ion-input>
+        </ion-item>
+    
+    
+      <br>
+      <ion-item>
+        <ion-label>Dias</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Mg</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Cantidad</ion-label>
+        <ion-input (ionChange)="onCantidad($event)"></ion-input>
+      </ion-item>
+    
+   
+    </div>
+
+    <div class="align-items space-between ion-padding">
+      <ion-button (click)="onClose()" expand="block"  shape="round" color="rose" >
+       GUARDAR MEDICAMENTO
+      </ion-button>
+      <ion-button (click)="onCancelar()" expand="block" fill="clear" shape="round"  color="rose">
+        CANCELAR
+      </ion-button>
+    </div>
+
+
+
+</ion-content>

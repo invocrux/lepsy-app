@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.title-header{
+  padding-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+ion-content {
+  --background: #fef7ff;
+}
+
+.agregar{
+  display: flex;
+    text-align: end;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+

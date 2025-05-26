@@ -1,0 +1,107 @@
+<ion-content>
+  <div style="height: 100px; text-align: center">
+    <img
+      src="assets/svg/back-button-dark.svg"
+      alt=""
+      (click)="onMostrarLogin()"
+      (keydown)="onMostrarLogin()"
+      class="back-button-dark"
+    />
+
+    <div>
+      <img
+        src="assets/svg/lepsy_logo_dark.svg"
+        alt=""
+        style="margin-top: 30px; width: 40%"
+      />
+      <ion-label class="title-header disBlock"
+        >CONTROL DE MEDICAMENTOS</ion-label
+      >
+    </div>
+  </div>
+  <div class="div-modal ion-padding" style="height: 78%">
+    <br />
+    <ion-label>Horario Mañana</ion-label>
+
+    <div
+      class="cardSinFlex align-items space-between"
+      *ngFor="let item of horarioManana"
+    >
+      <div class="align-items" style="gap: 10px;">
+        <div class="align-items">
+          <ion-checkbox mode="ios" [checked]="item.checked"></ion-checkbox>
+        </div>
+        <img src="assets/svg/pastilla.svg" alt="" />
+        <p>
+          <span class="disBlock">{{ item.hora }}</span>
+          {{ item.nombre }}
+        </p>
+      </div>
+
+      <ion-chip mode="ios" outline="false">
+        <ion-label>{{ item.cantidad }} {{ item.tipoMedicamento }}</ion-label>
+      </ion-chip>
+    </div>
+    <br /><br />
+
+    <ion-label>Horario Tarde</ion-label>
+    <div
+      class="cardSinFlex align-items space-between"
+      *ngFor="let item of horarioTarde"
+    >
+      <div class="align-items" style="gap: 10px;">
+        <div class="align-items">
+          <ion-checkbox mode="ios" [checked]="item.checked"></ion-checkbox>
+        </div>
+        <img src="assets/svg/pastilla.svg" alt="" />
+        <p>
+          <span class="disBlock">{{ item.hora }}</span>
+          {{ item.nombre }}
+        </p>
+      </div>
+
+      <ion-chip mode="ios" outline="false">
+        <ion-label>{{ item.cantidad }} {{ item.tipoMedicamento }}</ion-label>
+      </ion-chip>
+    </div>
+
+    <br /><br />
+
+    <ion-label>Horario Noche</ion-label>
+    <div
+      class="cardSinFlex align-items space-between"
+      *ngFor="let item of horarioNoche"
+    >
+    <div class="align-items" style="gap: 10px;">
+      <div class="align-items">
+        <ion-checkbox mode="ios" [checked]="item.checked"></ion-checkbox>
+      </div>
+      <img src="assets/svg/pastilla.svg" alt="" />
+      <p>
+        <span class="disBlock">{{ item.hora }}</span>
+        {{ item.nombre }}
+      </p>
+    </div>
+
+      <ion-chip mode="ios" outline="false">
+        <ion-label>{{ item.cantidad }} {{ item.tipoMedicamento }}</ion-label>
+      </ion-chip>
+    </div>
+    <br /><br /><br /><br />
+
+    <div class="agregar">
+      <div style="font-size: 22px; margin-right: 10px">
+        <ion-label class="disBlock">Agregar </ion-label>
+        <ion-label class="disBlock"> Medicación</ion-label>
+      </div>
+      <ion-button
+        shape="round"
+        style="--background: #b096b2"
+        size="large"
+        (click)="openAddMedicamento()"
+      >
+        <ion-icon slot="icon-only" name="add" color="white"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

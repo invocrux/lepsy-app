@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+
+ion-toggle{
+  scale: 1.0;
+  --track-background-checked: #896591;
+}
