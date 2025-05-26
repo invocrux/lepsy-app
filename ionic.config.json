@@ -1,0 +1,7 @@
+{
+  "name": "lepsy-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
